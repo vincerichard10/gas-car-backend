@@ -14,6 +14,11 @@ const PORT = process.env.PORT || 4000;
 
 app.use(bodyParser.json());
 
+
+app.get("/api/v1/test", async (req, res) => {
+    return res.json({ "message": "ONLINE" })
+})
+
 // Routes
 app.use('/api/v1/auth', authRoutes);
 
